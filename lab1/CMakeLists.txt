@@ -11,9 +11,9 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(googletest)
 
-add_executable(oop_lab_1 oop_lab_1.cpp)
+add_executable(main main.cpp count_ones.cpp)
 
-add_executable(tests oop_lab_1_test.cpp)
+add_executable(tests tests.cpp count_ones.cpp)
 target_link_libraries(tests gtest gtest_main pthread)
 
 target_include_directories(tests PRIVATE ${gtest_SOURCE_DIR}/include)
